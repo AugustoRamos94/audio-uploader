@@ -1,0 +1,26 @@
+Based on https://www.youtube.com/watch?v=hmkF77F9TLw&list=PLWKjhJtqVAbn21gs5UnLhCQ82f923WCgM&index=15
+
+Update localhost mapping
+
+`sudo vim /etc/hosts`
+
+Then add a new entry point for mp3converter.com
+
+`127.0.0.1 mp3converter.com`
+
+And add a new entry point for rabbitmq-manager.com
+
+`127.0.0.1 rabbitmq-manager.com`
+
+Two queues should be created in rabbitmq-manager:
+
+`video` and `mp3`
+
+# Add minikube ingress
+
+`minikube addons enable ingress`
+
+# Run minkube ingress
+
+`minikube tunnel`
+
