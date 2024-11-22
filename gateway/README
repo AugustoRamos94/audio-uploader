@@ -1,0 +1,31 @@
+# Freeze current depencies
+
+`pip3 freeze > requirements.txt --isolated`
+
+# Build image
+
+`docker build .`
+
+# Tag image
+
+`docker tag 'id from build command' augustoramos94/gateway:latest`
+
+# Push image
+
+`docker push augustoramos94/gateway:latest`
+
+# Deploy kubernets
+
+`kucectl apply -f ./`
+
+# Delete deploy
+
+`kubectl delete -f ./`
+
+# Update deployment replicas
+
+`kubectl scale deployment --replicas=0 gateway`
+
+# Describe deployment
+
+`kubectl describe pod gateway-0`
